@@ -7,4 +7,4 @@ TypeScript, no framework. The page reads a live list from the shared Supabase te
 
 | Production | Preview gate |
 |---|---|
-| _not deployed yet_ | yes |
+| https://heddle-cove-65iz.vercel.app | yes |
