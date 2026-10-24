@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Heddle Cove works</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header a { color: #2f7d4f; font-weight: 700; text-decoration: none; }
+      main { padding: 2rem 0; }
+      .inner { max-width: 44rem; margin: 0 auto; padding: 0 1rem; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin: 0 0 1rem;
+        background: linear-gradient(90deg, #2f7d4f, #7a3fd1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background or padding. */
+      .intro { margin: 0; padding: 0; max-width: none; font-size: 1.1rem; line-height: 1.5; }
+      /* Intentional, for Impeccable's test drive: low-contrast light grey text. */
+      .aside { color: #c4c4c0; margin: 1.5rem 0 0.5rem; }
+      ol.steps { padding-left: 1.2rem; line-height: 1.8; }
+      table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+      th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid #e5e5e0; }
+      /* Intentional, for Impeccable's test drive: layout property in a transition. */
+      .bar { height: 0.5rem; width: 40%; background: #2f7d4f; border-radius: 0.25rem; transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      /* Intentional, for Impeccable's test drive: link text under the 10px floor. */
+      .back { font-size: 10px; color: #2f7d4f; }
+      /* Intentional, for Impeccable's test drive: hard-coded colour outside the site's palette. */
+      .note { border-left: 4px solid #e8457c; padding-left: 0.75rem; }
+    </style>
+  </head>
+  <body>
+    <header><a href="/">Heddle Cove</a></header>
+    <main>
+      <div class="inner">
+        <h1>How Heddle Cove works</h1>
+      </div>
+      <p class="intro">Heddle Cove keeps one short list in the cloud and shows it on the page the moment you open it. Nothing to install and nothing to sign in to.</p>
+      <div class="inner">
+        <p class="aside">Lists refresh every time the page loads.</p>
+        <ol class="steps">
+          <li>Add an item to the shared list.</li>
+          <li>Open the Heddle Cove page.</li>
+          <li>See the five newest items, newest first.</li>
+        </ol>
+        <p class="note">Finished items are marked with a check so you can tell them apart at a glance.</p>
+        <table>
+          <thead><tr><th>Item state</th><th>How it shows</th></tr></thead>
+          <tbody>
+            <tr><td>Open</td><td>Plain text</td></tr>
+            <tr><td>Done</td><td>Prefixed with a check mark</td></tr>
+            <tr><td>No items</td><td>A short empty-list message</td></tr>
+          </tbody>
+        </table>
+        <div class="bar" role="img" aria-label="Typical list fill: 40 percent"></div>
+        <p><a class="back" href="/">Back to the list</a></p>
+      </div>
+    </main>
+    <footer>Heddle Cove</footer>
+  </body>
+</html>
